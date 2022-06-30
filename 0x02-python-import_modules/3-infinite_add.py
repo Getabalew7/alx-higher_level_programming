@@ -5,8 +5,7 @@ if __name__ == "__main__":
     
     n = len(argv) - 1
     if n == 0:
-        print("{:d}".format(n))
-        return
+        print("{:d}".format(n))  
     else:
         i = 1
         add = 0
