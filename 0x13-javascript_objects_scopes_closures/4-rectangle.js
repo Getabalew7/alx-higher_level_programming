@@ -1,14 +1,27 @@
 #!/usr/bin/node
-const Rectangle = require('./4-rectangle');
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
+  }
 
-const r1 = new Rectangle(2, 3);
-console.log('Normal:');
-r1.print();
+  print () {
+    const rect = 'X'.repeat(this.width);
+    for (let i = 0; i < this.height; i++) {
+      console.log(rect);
+    }
+  }
 
-console.log('Double:');
-r1.double();
-r1.print();
+  rotate () {
+    const temp = this.width;
+    this.width = this.height;
+    this.height = temp;
+  }
 
-console.log('Rotate:');
-r1.rotate();
-r1.print();
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
+};
