@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """SQL injection"""
 from sys import argv
